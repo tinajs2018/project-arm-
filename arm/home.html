@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Words and the paragraph  Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <!-- <h1  style="width: auto;color: white;" >{{datetoday2}}</h1> -->
+
+    <div> <form action="/count",method ="POST" enctype="multipart/form-data">
+    <h2 style="border-radius: 20px 20px 0px; background-color: antiquewhite ;" >words  and paragraph</h2>
+    <label style="font-size: 20px;" > Enter the text</label>
+     <br>
+
+    <textarea name="text" id="text" cols="30" rows="10">Required</textarea>
+    <br>
+
+    <button style="font-size: 24px; font-weight: bold;">Count</button>
+
+    {% if words%}
+    <p  class="text_centre" style="color: black;font-size: 21px;">Words - {{ words }} || Paragraphs - {{ paras
+    }} || Characters - {{ chars }}</p>
+
+    {%endif %}
+    </form>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+    function clock() {
+        clockElement.textContent = new Date().toString().slice(15, 24);
+    }
+    setInterval(clock, 1000);
+</script>
+  </body>
+</html>
